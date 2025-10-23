@@ -1,0 +1,35 @@
+function [v, t] = droplet_velocity(r)
+
+% David Haberkorn
+% 22 Oct 2025
+% ES1060 Intro to Engineering Problem Solving
+% Homework 5
+
+
+% The function converts degrees celisius into degrees fahrenheit and
+% degrees kelvin.
+arguments (Input)
+r
+end
+
+arguments (Output)
+v
+t
+end
+rho_l = 1000;
+g = 9.8;
+nu = 1.8e-5;
+
+v = ( (4/3).*pi.*r.^3.*rho_l.*g ) ./ (6.*pi.*nu.*r);
+
+t = (1454 * (1/0.3048) ) ./ v;
+end
+
+
+
+
+
+
+% NOTES
+% F_G = (4/3) * pi * r.^3 * rho_l * g
+% F_D = 6 * pi * nu * r * v
