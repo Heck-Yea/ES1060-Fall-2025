@@ -1,0 +1,6 @@
+% Nerds
+
+for k = 1:21
+    x(k) = (k-1) * 5
+    y(k) = cos(x(k))
+end
